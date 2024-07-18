@@ -1,0 +1,138 @@
+@media (max-width: 767px) {
+  .header {
+    grid-template-columns: 2% 3fr 1fr 2%;
+  }
+  .button_copy {
+    flex-direction: row-reverse;
+    gap: 0;
+  }
+  .button_copy__link {
+    display: none;
+  }
+  .preview {
+    min-height: 363px;
+  }
+  .preview__img {
+    display: none;
+  }
+  .label {
+    width: 263px;
+    height: 66px;
+    align-items: center;
+    margin-right: 0;
+  }
+  .label__svg {
+    width: 12px;
+    height: 78px;
+    flex-wrap: nowrap;
+    align-items: stretch;
+  }
+  .label__text {
+    width: auto;
+    height: auto;
+  }
+  .label__word {
+    font-size: 38px;
+  }
+  .label__word:nth-child(2) {
+    font-size: 20px;
+  }
+  .label__word:last-child {
+    font-size: 20px;
+  }
+  .offer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .offer__card:last-child {
+    max-width: 360px;
+    height: 111px;
+    grid-column: 1;
+  }
+  .product__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .subscribe_box {
+    height: 550px;
+  }
+  .subscribe_background {
+    width: 100vw;
+    height: 550px;
+  }
+  .subscribe_background__image {
+    max-width: 2000px;
+    left: 40%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .subscribes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding-top: 54px;
+    gap: 59px;
+  }
+  .subscribes__text {
+    padding-bottom: 0;
+  }
+  .footer {
+    display: flex;
+    height: auto;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .footer__brands {
+    padding-top: 43px;
+    padding-bottom: 40px;
+  }
+  .footer__text {
+    padding-top: 0;
+    padding-bottom: 9px;
+  }
+}
+@media (max-width: 767px) {
+  .breadcrumb {
+    height: 148px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 32px;
+    background-color: #F7F7F7;
+  }
+  .breadcrumb__title {
+    padding-top: 24px;
+  }
+  .product:last-child {
+    display: none;
+  }
+  .product__box {
+    padding-bottom: 64px;
+  }
+}
+@media (max-width: 767px) {
+  .sort {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .filter__text {
+    font-size: 0;
+    font-weight: 0;
+    line-height: 0;
+  }
+  .filter__svg {
+    width: 37px;
+    height: 25px;
+  }
+}/*# sourceMappingURL=style_catalog_mobile.css.map */

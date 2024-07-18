@@ -1,0 +1,503 @@
+@import 'vars'
+@import 'mixins'
+
+* 
+    margin: 0
+    padding: 0
+    font-family: 'Lato', sans-serif
+
+body 
+    padding-left: calc(50% - #{$maxWidth / 2})
+    padding-right: calc(50% - #{$maxWidth / 2})
+
+a 
+    text-decoration: none
+
+img 
+    max-width: 100%
+
+.desktop_index 
+    @include columnCenter
+    position: relative
+    overflow: hidden
+
+.header 
+    width: 100vw
+    max-width: $maxWidth
+    height: 75px
+    background-color: $dark
+    display: grid
+    grid-template-columns: 18% 2fr 1fr
+    align-items: center
+    position: relative
+
+.logo 
+    width: 111px
+    height: 38px
+    grid-column: 2
+    @include rowCenter
+    flex-wrap: wrap
+    justify-content: center
+    gap: 22px
+
+    &__img_1 
+        width: 26px
+        height: 27px
+        fill: $colorSiteSecond
+    
+    
+    &__img_2 
+        width: 44px
+        height: 38px
+
+.button_copy 
+    width: 159px
+    height: 29px
+    @include rowCenter()
+    gap: 20px
+
+#check 
+    left: -999999px
+    visibility: hidden
+
+#check:checked ~ .burger_menu__menu 
+    right: 0px
+    box-shadow: 6px 4px 35px 0px $gray
+
+.burger_menu
+
+    &__menu 
+        position: absolute
+        z-index: 2
+        width: 232px
+        top: 75px
+        right: -232px
+        @include column
+        background-color: white
+        transition: right 0.3s
+    
+    &__heading 
+        font-size: 14px
+        font-weight: 700
+        line-height: 17px
+        color: $dark
+        padding: 9px 34px 24px
+    
+    &__box 
+        @include column
+        gap: 20px
+        padding-left: 33px
+        padding-bottom: 32px
+    
+    &__title 
+        font-size: 14px
+        font-weight: 400
+        line-height: 17px
+        color: $colorSite
+    
+    &__list
+        @include column
+        gap: 11px
+        margin-left: 22px
+    
+    &__link
+       font-size: 14px
+        font-weight: 400
+        line-height: 17px
+        color: $dark                            
+
+.preview 
+    max-height: 689px
+    width: 100vw
+    max-width: $maxWidth
+    @include rowCenter
+    justify-content: center
+    background-color: $colorSiteSecond
+
+    &__img
+        width: 800px
+        max-height: 689px
+        display: flex
+        justify-content: end
+
+.label 
+    width: 405px
+    @include row
+    justify-content: center
+    align-items: start
+    gap: 12px
+    margin-right: 3%
+
+    &__svg
+        width: 12px
+        height: 100px
+        flex-shrink: 0
+        display: flex
+        flex-wrap: wrap
+        align-items: end
+
+    &__text 
+        width: 400px
+        height: 96px
+        display: flex
+        flex-wrap: wrap 
+        justify-content: start
+        gap: 5px
+        
+    &__word 
+        color: $dark
+        font-size: 48px
+        font-style: normal
+        font-weight: 900
+        line-height: normal
+        
+    &__word:nth-child(2) 
+        font-size: 32px
+        font-weight: 700
+        
+    &__word:last-child 
+        color: $colorSite
+        font-size: 32px
+        font-weight: 700
+    
+.offer 
+    width: 80%
+    max-width: $maxWidthSecond
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    gap: 26px
+    margin-top: 10%
+    padding-bottom: 8%
+    
+    &__card
+        max-width: 360px
+        height: auto
+        border: 2px solid $dark
+        display: flex
+        justify-content: center
+        align-items: center
+        background-color: $dark
+        transition: transform 1s
+
+    &__card:last-child 
+        max-width: $maxWidthSecond
+        grid-column: 1 / 4
+    
+    &__card:hover 
+        transform: translateY(-30px) scale(1.3)
+
+    &__img 
+        opacity: 0.3
+        
+    &__text 
+        width: auto
+        height: auto
+        @include columnCenter
+        position: absolute
+        z-index: 1
+        
+    &__word
+        color: $colorSiteSecond
+        text-align: center
+        font-size: 16px
+        font-style: normal
+        font-weight: 400
+        line-height: normal
+
+        &_category
+            color: $colorSite
+            font-size: 24px
+            font-weight: 700
+
+.products
+    width: 80%
+    max-width: $maxWidthSecond
+    @include columnCenter
+    flex-wrap: wrap
+    padding-bottom: 6%
+
+    &__title 
+        width: 100%
+        @include columnCenter
+        flex-wrap: wrap
+        justify-content: start
+        padding-bottom: 6%
+
+    &__text 
+        color: $dark
+        font-size: 30px
+        font-style: normal
+        font-weight: 400
+        line-height: normal
+        
+    &__text:last-child
+        color: $gray
+        font-size: 14px
+
+.product
+    @include columnCenter
+    position: relative
+    justify-content: center
+
+    &__box
+        width: 100%
+        max-width: $maxWidthSecond
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        justify-content: center
+        gap: 30px
+        padding-bottom: 6%        
+
+    &__view
+        display: flex
+        align-items: center
+        justify-content: center
+        
+    &:hover &__img 
+        filter: brightness(0.5)
+      
+    &:hover &__add
+        display: flex
+
+    &__img 
+        width: 100%
+
+    &__add 
+        position: absolute
+        border: 1px solid $colorSiteSecond
+        width: 139px
+        height: 44px
+        font-style: normal
+        font-weight: 400
+        font-size: 14px
+        line-height: 17px
+        display: none
+        align-items: center
+        justify-content: center
+        gap: 11px
+        color: $colorSiteSecond
+        transition: all 0.5s
+      
+    &__add:hover 
+        box-shadow: 0 0 5px $colorSiteSecond
+      
+    &__add:hover svg path 
+        fill: $colorSite
+      
+    &__content
+        max-width: 360px
+        background: $colorSiteCatalog
+        @include column
+        justify-content: center
+        align-items: flex-start
+        padding-top: 24px
+        padding-bottom: 16px
+        gap: 16px
+      
+    &__heading
+        font-style: normal
+        font-weight: 400
+        font-size: 13px
+        line-height: 16px
+        padding-left: 3vw
+        color: $dark
+      
+    &__text 
+        font-style: normal
+        font-weight: 300
+        font-size: 14px
+        line-height: 17px
+        padding-left: 2.5vw
+        padding-right: 2vw
+        color: $gray
+      
+    &__price 
+        font-style: normal
+        font-weight: 400
+        font-size: 16px
+        line-height: 19px
+        padding-left: 3vw
+        color: $colorSite
+
+.button
+    background-color: $colorSite
+    display: block
+    width: 212px
+    height: 48px
+    font-style: normal
+    font-weight: 400
+    font-size: 16px
+    line-height: 12px
+    color: $colorSiteSecond
+    text-align: center
+    line-height: 40px
+    transition: all 0.3s
+    animation: shake-horizontal 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both
+
+    &:hover
+        background-color: $colorSiteSecond
+        color: $colorSite
+
+.feature 
+    width: 100vw
+    max-width: $maxWidth
+    background-color: $dark
+    padding-top: 104px
+    padding-bottom: 104px
+    @include row
+    justify-content: center
+    gap: 30px
+
+    &__img 
+        transition: all 0.5s
+      
+    &__img:hover 
+        box-shadow: 0 0 5px $colorSiteSecond
+        background-color: $gray
+    
+    &__item 
+        width: 360px
+        @include columnCenter
+        gap: 24px
+      
+    &__heading 
+        font-style: normal
+        font-weight: 400
+        font-size: 20px
+        line-height: 24px
+        color: $colorSiteSecond
+
+    &__text
+        font-style: normal
+        font-weight: 300
+        font-size: 14px
+        line-height: 17px
+        text-align: center
+        color: $colorSiteSecond
+
+.subscribe_background 
+    @include columnCenter
+    opacity: 50%
+    height: auto
+
+    &__image 
+        max-width: $maxWidth
+        height: auto
+        position: absolute
+        left: 30%
+        transform: translateX(-30%)
+
+.subscribe_box 
+    width: 100vw
+    max-width: $maxWidth
+    height: 448px
+    display: flex
+
+.subscribes
+    position: absolute
+    width: 100vw
+    max-width: $maxWidth
+    height: 448px
+    @include rowCenter
+    justify-content: space-around
+    z-index: 1
+
+    &__info 
+        @include columnCenter
+
+    &__image
+        width: 96px
+        height: 96px
+        border-radius: 50%
+        overflow: hidden
+        display: flex
+        align-items: stretch
+
+        &_content
+            width: 150px
+            height: 130px
+            object-fit: cover
+
+    &__text
+        width: 360px
+        font-style: italic
+        font-size: 20px
+        text-align: center
+        padding-top: 20px
+        padding-bottom: 50px
+
+.subscribe
+    @include columnCenter
+
+    &__title 
+        font-size: 20px
+        font-weight: bold
+
+    &__text
+        height: 44px
+        font-size: 18px
+
+    &__input 
+        width: 350px
+        height: 50px
+        @include row
+
+        &_div
+            width: 250px
+            height: 50px
+            border-top-left-radius: 25px
+            border-bottom-left-radius: 25px
+            display: flex
+            padding-left: 30px
+            background: rgb(225, 225, 225)
+
+    &__field
+        width: auto
+        border: none
+        margin: 2px
+        outline: none
+        background: rgb(225, 225, 225)
+
+    &__button 
+        width: 100px
+        height: 50px
+        border-top-right-radius: 25px
+        border-bottom-right-radius: 25px
+        display: flex
+        justify-content: center
+        align-items: center
+        background-color: $colorSite
+        color: white
+        transition: all 0.3s
+
+    &__button:hover
+        box-shadow: 0 0 5px $gray
+
+.footer
+    @include rowCenter
+    width: 100vw
+    max-width: $maxWidth
+    height: 75px
+    background-color: $dark
+    justify-content: space-around
+    z-index: 3
+
+    &__text
+        padding-top: 24px
+        padding-bottom: 24px
+        font-size: 16px
+        font-weight: 400
+        color: white
+
+    &__brands
+        @include row
+        gap: 8px
+        padding-top: 24px
+        padding-bottom: 24px
+
+    &__brand
+        width: 32px
+        height: 32px
+        @include rowCenter
+        justify-content: center
+        background-color: white

@@ -1,0 +1,28 @@
+@import 'style_mobile'
+@import 'mixins'
+
+@media (max-width:767px)
+        
+    .breadcrumb
+        @include rowCenter
+        justify-content: center
+        padding: 0
+        
+    .cart_box
+        @include columnCenter
+        gap: 48px
+        padding-bottom: 96px
+        
+        &__right
+            width: 100vw
+            @include columnCenter
+            justify-content: center
+            padding-top: 0
+
+    .card
+        width: 90vw
+
+    .cart_buttons
+        justify-content: space-around
+        padding-bottom: 0
+        width: 95vw

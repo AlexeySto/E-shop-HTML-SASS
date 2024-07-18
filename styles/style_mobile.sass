@@ -1,0 +1,95 @@
+@import 'mixins'
+    
+@media (max-width:767px)
+
+    .header
+        grid-template-columns: 2% 3fr 1fr 2%
+
+    .button_copy
+        flex-direction: row-reverse
+        gap: 0
+
+        &__link
+            display: none
+
+    .preview
+        min-height: 363px
+
+        &__img
+            display: none
+
+    .label
+        width: 263px
+        height: 66px
+        align-items: center
+        margin-right: 0
+
+        &__svg
+            width: 12px
+            height: 78px
+            flex-wrap: nowrap
+            align-items: stretch
+
+        &__text
+            width: auto
+            height: auto
+
+        &__word
+            font-size: 38px
+
+        &__word:nth-child(2)
+            font-size: 20px
+
+        &__word:last-child
+            font-size: 20px
+
+    .offer
+        @include columnCenter
+
+        &__card:last-child
+            max-width: 360px
+            height: 111px
+            grid-column: 1
+
+    .product__box
+        @include columnCenter
+        justify-content: center
+
+    .feature
+        @include columnCenter
+
+    .subscribe_box
+        height: 550px
+
+    .subscribe_background
+        width: 100vw
+        height: 550px
+
+        &__image
+            max-width: 2000px
+            left: 40%
+            object-fit: contain
+
+    .subscribes
+        @include columnCenter
+        justify-content: start
+        padding-top: 54px
+        gap: 59px
+
+        &__text
+            padding-bottom: 0
+
+    .footer
+        display: flex
+        height: auto
+        flex-direction: column-reverse
+        align-items: center
+
+        &__brands
+            padding-top: 43px
+            padding-bottom: 40px
+
+        &__text
+            padding-top: 0
+            padding-bottom: 9px
+            

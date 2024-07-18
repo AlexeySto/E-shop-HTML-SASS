@@ -1,0 +1,23 @@
+@import 'style_tablet'
+@import 'mixins'
+
+@media (min-width:768px) and (max-width:1024px)
+    
+    .breadcrumb
+        @include rowCenter
+        padding-left: 16px
+        
+    .cart_box
+        @include columnCenter
+        gap: 64px
+        padding-bottom: 128px
+        
+        &__right
+            width: 95vw
+            @include rowCenter
+            justify-content: center
+            padding-top: 0
+            
+    .cart_buttons
+        justify-content: space-around
+        padding-bottom: 0

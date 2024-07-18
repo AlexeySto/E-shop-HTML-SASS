@@ -1,0 +1,89 @@
+@import 'style_product'
+
+.breadcrumb 
+    background-color: $colorSiteCatalog
+
+datalist 
+    grid-column-start: 4
+    grid-column-end: 6
+
+datalist:first-child
+    grid-column: 1
+
+summary
+    @include rowCenter
+    gap: 10px
+
+.details__filter[open]
+    color: $colorSite
+
+    svg
+        fill: $colorSite
+
+.details__filter_box
+    color: $dark
+
+.details__filter_box[open] summary
+    color: $colorSite
+
+.sort
+    width: 95vw
+    display: grid
+    grid-template-columns: 1fr 20% 1fr 36%
+    align-items: center
+
+    &__box 
+        width: 330px
+        @include rowCenter
+        gap: 28px
+        grid-column: 3
+
+.filter
+    grid-column: 1
+
+    &__svg
+        fill: $dark
+
+.filter_box
+    position: absolute
+    z-index: 1
+    @include column
+    gap: 6px
+    width: 360px
+    background-color: white
+    box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21)
+    box-sizing: border-box
+    padding: 16px
+
+    &__list
+        @include column
+        padding: 24px 17px 24px
+        gap: 11px
+                
+
+    &__link
+        font-size: 14px
+        font-weight: 400
+        line-height: 17px
+        color: $dark
+       
+.product__box
+    width: 95vw
+    padding-bottom: 0%
+
+.pagination 
+    width: 285px
+    height: 44px
+    @include rowCenter
+    justify-content: space-around
+    margin-top: 48px
+    margin-bottom: 96px
+
+    &__text
+        font-size: 16px
+        font-weight: 300
+        line-height: 19px
+        color: $colorBorder
+
+    &__text:nth-child(2)
+        color: $colorSite

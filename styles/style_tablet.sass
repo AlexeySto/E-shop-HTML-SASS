@@ -1,0 +1,47 @@
+@import 'mixins'
+@import 'vars'
+    
+@media (min-width:768px) and (max-width:1024px)
+
+    .header
+        grid-template-columns: 4% 3fr 1fr
+
+    .offer
+        width: 95%
+
+    .products
+        width: 95%
+
+    .product__box
+        grid-template-columns: 1fr 1fr
+        width: 90%
+        gap: 2vw
+
+    .feature
+        @include columnCenter
+
+    .subscribe_box
+        height: 693px
+
+    .subscribe_background
+        width: 100vw
+        height: 693px
+
+        &__image
+            max-width: 2800px
+            left: 40%
+            object-fit: contain
+
+    .subscribes
+        @include columnCenter
+        padding-top: 54px
+        gap: 48px
+
+    .footer
+        justify-content: space-between
+
+        &__text
+            padding-left: 32px
+
+        &__brands
+            padding-right: 32px

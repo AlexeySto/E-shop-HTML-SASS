@@ -1,0 +1,21 @@
+@import 'style_mobile'
+@import 'vars'
+@import 'mixins'
+
+@media (max-width:767px)
+
+    .breadcrumb 
+        height: 148px
+        @include columnCenter
+        justify-content: start
+        gap: 32px
+        background-color: $colorSiteCatalog
+
+        &__title
+            padding-top: 24px
+        
+    .product:last-child
+        display: none
+
+    .product__box
+        padding-bottom: 64px
